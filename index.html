@@ -2,9 +2,78 @@
     <html>
         <head>
             <title></title>
+            <link href="css/style.css" rel="stylesheet">
         </head>
+        <body>
+            <header>
+                <h1 id="title">Electric Vehicle Use Survey</h1>
+                <p id="description">Fill out the following questions to the best of your ability</p>
+            </header>
+            <main>
+                <form id="survey-form">
 
+                    <div class="form-group">
+                        <label id="name-label">Name</label>
+                        <input id="name" type="text" name="name" placeholder="Enter your full name" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label id="email-label">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Enter your Email address" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label id="number-label">Age (optional)</label>
+                        <input id="number" type="number" name="age" placeholder="Age" min="9" max="125">
+                    </div>
 
+                    <div class="form-group">
+                        <p>What is your gender?</p>
+                        <input name="gender" value="male" type="radio">
+                        <label>Male</label>
+
+                        <input name="gender" value="female" type="radio">
+                        <label>Female</label>
+
+                        <input name="gender" value="other" type="radio" checked>
+                        <label>Other</label>
+                    </div>
+
+                    <div class="form-group">
+                        <p>How long is your daily commute?</p>
+                        <select id="dropdown" name="commute-distance" required>
+                            <option disabled selected value>Select commute distance</option>
+                            <option value="0-10mi">0-10 miles</option>
+                            <option value="11-25mi">11-25 miles</option>
+                            <option value="26-50mi">26-50 miles</option>
+                            <option value="over50">More than 50 miles</option>
+                            <option value="no-commute">I don't commute/Other</option>
+                          </select>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Reasons you'd consider an electric vehicle (check all that apply)</p>
+                        <input name="reasons" value="environment" type="checkbox">
+                        <label>Environmental Concerns</label><br>
+
+                        <input name="reasons" value="cost" type="checkbox">
+                        <label>Cost</label><br>
+
+                        <input name="reasons" value="other" type="checkbox">
+                        <label>Other/Not Specified</label>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Any other comments or suggestions?</p>
+                        <textarea placeholder="Enter your comment here..."></textarea><br>
+                    </div>
+
+                    <div>
+                       <p></p> <button id="submit" type="submit">Submit</button></p>
+                    </div>
+                </form>
+            </main>
+          <!-- ========================This is the FCC testing script, advised to place above /body tag (need to uncomment out before running test)============================= -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>   
+        </body>
     </html>
